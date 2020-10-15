@@ -20,12 +20,12 @@
 - [Security, Identity, & Compliance](#security-identity--compliance)
 	- [AWS Artifact](#aws-artifact)
 	- [AWS Directory Service](#aws-directory-service)
-	- [**AWS Security Hub**](#aws-security-hub)
+	- [AWS Security Hub](#aws-security-hub)
 	- [Amazon Inspector](#amazon-inspector)
 	- [Amazon GuardDuty (S3 Duty)](#amazon-guardduty-s3-duty)
 	- [Amazon Macie](#amazon-macie)
 - [Machine Learning](#machine-learning)
-	- [**Amazon CodeGuru**](#amazon-codeguru)
+	- [Amazon CodeGuru](#amazon-codeguru)
 - [Management & Governance](#management--governance)
 	- [AWS Service Catalog](#aws-service-catalog)
 	- [AWS CloudFormation](#aws-cloudformation)
@@ -96,7 +96,7 @@ You create a forecast by selecting a future time range for your report.
 
 ### Cost Explorer
 
-**[Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)**
+[Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
 
 [AWS Cost Explorer now Supports Usage-Based Forecasts](https://aws.amazon.com/about-aws/whats-new/2019/07/usage-based-forecasting-in-aws-cost-explorer/)
 
@@ -115,9 +115,9 @@ Plans
 
 Basic Support is included for all AWS customers and includes:
 
-- **Customer Service and Communities** - 24x7 access to customer service, [documentation](https://docs.aws.amazon.com/), [whitepapers](https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc), and [support forums](https://forums.aws.amazon.com/index.jspa).
-- **[AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)** Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
-- **[AWS Personal Health Dashboard](https://aws.amazon.com/premiumsupport/technology/personal-health-dashboard/)** - A personalized view of the health of AWS services, and alerts when your resources are impacted.
+- Customer Service and Communities - 24x7 access to customer service, [documentation](https://docs.aws.amazon.com/), [whitepapers](https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc), and [support forums](https://forums.aws.amazon.com/index.jspa).
+- [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
+- [AWS Personal Health Dashboard](https://aws.amazon.com/premiumsupport/technology/personal-health-dashboard/) - A personalized view of the health of AWS services, and alerts when your resources are impacted.
 
 ## Amazon EC2 Pricing Plans
 
@@ -151,7 +151,7 @@ AWS Artifact is your go-to, central resource for compliance-related information 
 
 Procides multiple ways to use Microsoft [Active Directory](https://en.wikipedia.org/wiki/Active_Directory) (AD) with other AWS services | [Source](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html)
 
-## **AWS Security Hub**
+## AWS Security Hub
 
 Centrally view and manage security alerts and automate security checks | [Source](https://aws.amazon.com/security-hub/?aws-security-hub-blogs.sort-by=item.additionalFields.createdDate&aws-security-hub-blogs.sort-order=desc)
 
@@ -181,7 +181,7 @@ Amazon Macie is a fully managed data security and data privacy service that uses
 
 # Machine Learning
 
-## **Amazon CodeGuru**
+## Amazon CodeGuru
 
 Find your most expensive lines of code | [Source](https://aws.amazon.com/codeguru/)
 

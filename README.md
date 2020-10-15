@@ -110,7 +110,7 @@ Plans
 
 - Basic
 - Developer
-- Buisiness
+- Business
 - Enterprise
 
 Basic Support is included for all AWS customers and includes:

@@ -37,7 +37,7 @@
 	- [AWS CodeBuild](#aws-codebuild)
 	- [AWS Cloud9](#aws-cloud9)
 - [Cyptography & PKI](#cyptography--pki)
-	- [**AWS CloudHSM**](#aws-cloudhsm)
+	- [AWS CloudHSM](#aws-cloudhsm)
 	- [AWS Certificate Manager (ACM)](#aws-certificate-manager-acm)
 - [Other](#other)
 	- [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
@@ -247,7 +247,7 @@ A cloud IDE for writing, running, and debugging code
 
 # Cyptography & PKI
 
-## **AWS CloudHSM**
+## AWS CloudHSM
 
 Managed hardware security module (HSM) on the AWS Cloud. | [Source](https://aws.amazon.com/cloudhsm/?nc2=type_a)
 

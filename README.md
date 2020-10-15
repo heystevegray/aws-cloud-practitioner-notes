@@ -2,7 +2,6 @@
 
 - [Overview](#overview)
 - [AWS Documentation](#aws-documentation)
-- [Whizlabs Tricky questions](#whizlabs-tricky-questions)
 - [Database](#database)
 	- [Amazon Aurora](#amazon-aurora)
 	- [DynamoDB](#dynamodb)
@@ -42,23 +41,18 @@
 - [Other](#other)
 	- [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
 	- [Shared Responsibility Model](#shared-responsibility-model)
+- [Whizlabs Tricky questions](#whizlabs-tricky-questions)
 - [Resources](#resources)
 	- [AWS](#aws)
 	- [Intellipaat](#intellipaat)
 	- [Pluralsight](#pluralsight)
 	- [Tutorials Dojo](#tutorials-dojo)
+	- [Whizlabs](#whizlabs)
 	- [Preparation](#preparation)
 
 # AWS Documentation
 
 - [All AWS Documentation](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v)
-
-# Whizlabs Tricky questions
-
-- There is no "AWS Resource center" - [Getting Started Resource Center](https://aws.amazon.com/getting-started/)
-- There is no "Premium" AWS Support Plan
-- "AWS Service health dashboard" - [https://status.aws.amazon.com/](https://status.aws.amazon.com/)
-  - "AWS Publishes most up-to-the-minute information on AWS service availability here."
 
 # Database
 
@@ -273,6 +267,15 @@ Security and Compliance is a shared responsibility between AWS and the customer 
 
 ![Image of the AWS Shared Responsibility Model](assets/shared-responsibility-model.png)
 
+# Whizlabs Tricky questions
+
+Here are some notes from their [free practice exam](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/).
+
+- There is no "AWS Resource center" - [Getting Started Resource Center](https://aws.amazon.com/getting-started/)
+- There is no "Premium" AWS Support Plan
+- "AWS Service health dashboard" - [https://status.aws.amazon.com/](https://status.aws.amazon.com/)
+  - "AWS Publishes most up-to-the-minute information on AWS service availability here."
+
 # Resources
 
 ## AWS
@@ -295,6 +298,10 @@ Security and Compliance is a shared responsibility between AWS and the customer 
 ## Tutorials Dojo
 
 - [https://tutorialsdojo.com/](https://tutorialsdojo.com/)
+
+## Whizlabs
+
+- [Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
 
 ## Preparation
 

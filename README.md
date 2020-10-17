@@ -2,6 +2,13 @@
 
 - [Overview](#overview)
 - [AWS Documentation](#aws-documentation)
+- [Compute](#compute)
+	- [Amazon EC2](#amazon-ec2)
+		- [EC2 data](#ec2-data)
+			- [Metadata](#metadata)
+			- [User data](#user-data)
+	- [Amazon Lightsail](#amazon-lightsail)
+		- [Resources](#resources)
 - [Database](#database)
 	- [Amazon Aurora](#amazon-aurora)
 	- [DynamoDB](#dynamodb)
@@ -17,32 +24,57 @@
 		- [Reserved instances](#reserved-instances)
 		- [Dedicated Hosts](#dedicated-hosts)
 - [Security, Identity, & Compliance](#security-identity--compliance)
+	- [Amazon Cognito](#amazon-cognito)
+		- [Web-identity federation](#web-identity-federation)
+			- [Resources](#resources-1)
 	- [AWS Artifact](#aws-artifact)
 	- [AWS Directory Service](#aws-directory-service)
 	- [AWS Security Hub](#aws-security-hub)
 	- [Amazon Inspector](#amazon-inspector)
+		- [Resource](#resource)
 	- [Amazon GuardDuty (S3 Duty)](#amazon-guardduty-s3-duty)
 	- [Amazon Macie](#amazon-macie)
 - [Machine Learning](#machine-learning)
 	- [Amazon CodeGuru](#amazon-codeguru)
+- [Networking & Content Delivery](#networking--content-delivery)
+	- [ELB](#elb)
 - [Management & Governance](#management--governance)
+	- [AWS Trusted Advisor](#aws-trusted-advisor)
+	- [AWS Trusted Advisor best practice recommendations](#aws-trusted-advisor-best-practice-recommendations)
+		- [Cost optimization](#cost-optimization)
+		- [Performance](#performance)
+		- [Security](#security)
+		- [Fault Tolerance](#fault-tolerance)
+		- [Service limits](#service-limits)
+	- [Amazon CloudWatch](#amazon-cloudwatch)
+	- [AWS Systems Manager](#aws-systems-manager)
 	- [AWS Service Catalog](#aws-service-catalog)
+		- [Resources](#resources-2)
 	- [AWS CloudFormation](#aws-cloudformation)
 	- [AWS Control Tower](#aws-control-tower)
 	- [AWS Organizations](#aws-organizations)
+		- [Managing organizational units (OUs)](#managing-organizational-units-ous)
 - [Developer Tools](#developer-tools)
 	- [AWS CodePipeline](#aws-codepipeline)
 	- [AWS CodeStar](#aws-codestar)
 	- [AWS CodeBuild](#aws-codebuild)
 	- [AWS Cloud9](#aws-cloud9)
-- [Cyptography & PKI](#cyptography--pki)
+- [Cryptography & PKI](#cryptography--pki)
 	- [AWS CloudHSM](#aws-cloudhsm)
 	- [AWS Certificate Manager (ACM)](#aws-certificate-manager-acm)
+	- [AWS Key Management Service (KMS)](#aws-key-management-service-kms)
 - [Other](#other)
 	- [AWS Personal Health Dashboard](#aws-personal-health-dashboard)
 	- [Shared Responsibility Model](#shared-responsibility-model)
+- [AWS Well-Architected Framework](#aws-well-architected-framework)
+	- [AWS Well-Architected and the Five Pillars](#aws-well-architected-and-the-five-pillars)
+		- [Operational Excellence Pillar](#operational-excellence-pillar)
+		- [Security Pillar](#security-pillar)
+		- [Reliability Pillar](#reliability-pillar)
+		- [Performance Efficiency Pillar](#performance-efficiency-pillar)
+		- [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources)
+- [Resources](#resources-3)
 	- [AWS](#aws)
 	- [Intellipaat](#intellipaat)
 	- [Pluralsight](#pluralsight)
@@ -53,6 +85,38 @@
 # AWS Documentation
 
 - [All AWS Documentation](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v)
+
+# Compute
+
+## Amazon EC2
+
+Virtual servers in the cloud | [Source](https://aws.amazon.com/ec2/?nc2=type_a&ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
+
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+
+### EC2 data
+
+#### Metadata
+
+Instance metadata is data about your instance that you can use to configure or manage the running instance. Instance metadata is divided into categories, for example, host name, events, and security groups. | [Source](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
+
+#### User data
+
+> User data is information that is passed to in instance's operating system, this can be in the form of a bash script written in plaintext. | [Source (Free Practice Test for AWS Certified Cloud Practitioner)](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+
+**Important**
+
+> Although you can only access instance metadata and user data from within the instance itself, the data is not protected by authentication or cryptographic methods. Anyone who has direct access to the instance, and potentially any software running on the instance, can view its metadata. Therefore, you should not store sensitive data, such as passwords or long-lived encryption keys, as user data. | [Source](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
+
+## Amazon Lightsail
+
+Launch and manage virtual private servers | [Source](https://aws.amazon.com/lightsail/?nc2=type_a)
+
+Lightsail is an easy-to-use cloud platform that offers you everything needed to build an application or website, plus a cost-effective, monthly plan.
+
+### Resources
+
+- [Amazon Lightsail features](https://aws.amazon.com/lightsail/features/)
 
 # Database
 
@@ -67,6 +131,8 @@ Amazon Aurora is fully managed by [Amazon Relational Database Service (RDS)](htt
 ## DynamoDB
 
 Fast and flexible NoSQL database service for any scale | [Source](https://aws.amazon.com/dynamodb/?nc2=type_a)
+
+Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale.
 
 # Billing & Cost Management
 
@@ -135,6 +201,20 @@ A Dedicated Host is a physical EC2 server dedicated for your use. Dedicated Host
 
 # Security, Identity, & Compliance
 
+## Amazon Cognito
+
+Identity management for your apps | [Source](https://aws.amazon.com/cognito/?nc2=type_a)
+
+Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
+
+### Web-identity federation
+
+Your app users can sign in either directly through a user pool, or federate through a third-party identity provider (IdP). | [Source](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-identity-federation.html)
+
+#### Resources
+
+- [Providing access to externally authenticated users (identity federation)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_federated-users.html)
+
 ## AWS Artifact
 
 No cost, self-service portal for on-demand access to AWS’ compliance reports. | [Source](https://aws.amazon.com/artifact/?nc2=type_a)
@@ -155,9 +235,15 @@ AWS Security Hub gives you a comprehensive view of your security alerts and secu
 
 Analyze application security | [Source](https://aws.amazon.com/inspector/?nc2=type_a)
 
-Tell inspector what targets to assess, and how often. Inspector can provide assesments at any stage in the deployment lifecycle.
+> Assesses applications for exposure, vulnerabilities, and deviations from best practices | [Source](https://aws.amazon.com/inspector/?nc2=type_a)
+
+Tell inspector what targets to assess, and how often. Inspector can provide assessments at any stage in the deployment lifecycle.
 
 Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications for exposure, vulnerabilities, and deviations from best practices.
+
+### Resource
+
+- [What is Amazon Inspector?](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_introduction.html)
 
 ## Amazon GuardDuty (S3 Duty)
 
@@ -181,15 +267,71 @@ Find your most expensive lines of code | [Source](https://aws.amazon.com/codegur
 
 Amazon CodeGuru is a developer tool powered by machine learning that provides intelligent recommendations for improving code quality and identifying an application’s most expensive lines of code.
 
+# Networking & Content Delivery
+
+## ELB
+
+Achieve fault tolerance for any application | [Source](https://aws.amazon.com/elasticloadbalancing/?nc2=type_a)
+
+Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.
+
 # Management & Governance
 
+## AWS Trusted Advisor
+
+Optimize performance and security | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+AWS Trusted Advisor is an online tool that provides you real time guidance to help you provision your resources following AWS best practices. Trusted Advisor checks help optimize your AWS infrastructure, increase security and performance, reduce your overall costs, and monitor service limits.
+
+## AWS Trusted Advisor best practice recommendations
+
+### Cost optimization
+
+AWS Trusted Advisor can save you money on AWS by eliminating unused and idle resources or by making commitments to reserved capacity. | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+### Performance
+
+AWS Trusted Advisor can improve the performance of your service by checking your service limits, ensuring you take advantage of provisioned throughput, and monitoring for over-utilized instances. | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+### Security
+
+AWS Trusted Advisor can improve the security of your application by closing gaps, enabling various AWS security features, and examining your permissions. | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+### Fault Tolerance
+
+AWS Trusted Advisor can increase the availability and redundancy of your AWS application by take advantage of auto scaling, health checks, multi AZ, and backup capabilities. | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+### Service limits
+
+AWS Trusted Advisor checks for service usage that is more than 80% of the service limit. Values are based on a snapshot, so your current usage might differ. Limit and usage data can take up to 24 hours to reflect any changes. | [Source](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+## Amazon CloudWatch
+
+Monitor resources and applications | [Source](https://aws.amazon.com/cloudwatch/?nc2=type_a)
+
+Amazon CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers.
+
+## AWS Systems Manager
+
+Gain operational insights and take action | [Source](https://aws.amazon.com/systems-manager/?nc2=type_a)
+
+Safely manage and operate you entire infrastructure.
+
+AWS Systems Manager gives you visibility and control of your infrastructure on AWS. Systems Manager provides a unified user interface so you can view operational data from multiple AWS services and allows you to automate operational tasks across your AWS resources. With Systems Manager, you can group resources, like Amazon EC2 instances, Amazon S3 buckets, or Amazon RDS instances, by application, view operational data for monitoring and troubleshooting, and take action on your groups of resources.
+
 ## AWS Service Catalog
+
+Create and use standardized products | [Source](https://aws.amazon.com/servicecatalog/?nc2=type_a&aws-service-catalog.sort-by=item.additionalFields.createdDate&aws-service-catalog.sort-order=desc)
+
+AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS. These IT services can include everything from virtual machine images, servers, software, and databases to complete multi-tier application architectures.
 
 Enables organizations to create and manage catalogs of IT services that are approved for use on AWS. | [Source](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
 
 AWS Service Catalog allows organizations to centrally manage commonly deployed IT services, and helps organizations achieve consistent governance and meet compliance requirements.
 
-Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale.
+### Resources
+
+- [AWS Service Catalog - Getting Started](https://www.youtube.com/watch?v=A9kKy6WhqVA&ab_channel=AmazonWebServices)
 
 ## AWS CloudFormation
 
@@ -210,6 +352,12 @@ If you’re an organization with multiple AWS accounts and teams, cloud setup an
 Policy-based management for multiple AWS accounts. | [Source](https://aws.amazon.com/organizations/?nc2=type_a)
 
 AWS Organizations helps you centrally govern your environment as you grow and scale your workloads on AWS.
+
+### Managing organizational units (OUs)
+
+You can use organizational units (OUs) to group accounts together to administer as a single unit. | [Source](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
+
+For example, you can attach a policy-based control to an OU, and all accounts within the OU automatically inherit the policy.
 
 # Developer Tools
 
@@ -239,7 +387,7 @@ Write, run, and debug code on a cloud IDE | [Source](https://aws.amazon.com/code
 
 A cloud IDE for writing, running, and debugging code
 
-# Cyptography & PKI
+# Cryptography & PKI
 
 ## AWS CloudHSM
 
@@ -249,9 +397,15 @@ AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to
 
 ## AWS Certificate Manager (ACM)
 
-Provision, manage, and depoy SSL/TLS certificates | [Source](https://aws.amazon.com/certificate-manager/?nc2=type_a)
+Provision, manage, and deploy SSL/TLS certificates | [Source](https://aws.amazon.com/certificate-manager/?nc2=type_a)
 
 AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.
+
+## AWS Key Management Service (KMS)
+
+Managed creation and control of encryption keys | [Source](https://aws.amazon.com/kms/?nc2=type_a)
+
+AWS Key Management Service (KMS) makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications.
 
 # Other
 
@@ -266,6 +420,40 @@ AWS Personal Health Dashboard provides alerts and remediation guidance when AWS 
 Security and Compliance is a shared responsibility between AWS and the customer | [Source](https://aws.amazon.com/compliance/shared-responsibility-model/)
 
 ![Image of the AWS Shared Responsibility Model](assets/shared-responsibility-model.png)
+
+# AWS Well-Architected Framework
+
+[AWS Well-Architected Framework](https://wa.aws.amazon.com/index.en.html)
+
+Review and improve your workloads | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+AWS Well-Architected helps cloud architects build secure, high-performing, resilient, and efficient infrastructure for their applications and workloads.
+
+## AWS Well-Architected and the Five Pillars
+
+### Operational Excellence Pillar
+
+The operational excellence pillar focuses on running and monitoring systems to deliver business value, and continually improving processes and procedures. Key topics include automating changes, responding to events, and defining standards to manage daily operations. | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+### Security Pillar
+
+The security pillar focuses on protecting information and systems. Key topics include confidentiality and integrity of data, identifying and managing who can do what with privilege management, protecting systems, and establishing controls to detect security events. | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+[More information can be found here](https://d1.awsstatic.com/whitepapers/architecture/AWS-Security-Pillar.pdf).
+
+### Reliability Pillar
+
+The reliability pillar focuses on ensuring a workload performs its intended function correctly and consistently when it’s expected to. A resilient workload quickly recovers from failures to meet business and customer demand. Key topics include distributed system design, recovery planning, and how to handle change. | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+### Performance Efficiency Pillar
+
+The performance efficiency pillar focuses on using IT and computing resources efficiently. Key topics include selecting the right resource types and sizes based on workload requirements, monitoring performance, and making informed decisions to maintain efficiency as business needs evolve. | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+### Cost Optimization Pillar
+
+The cost optimization pillar focuses on avoiding unnecessary costs. Key topics include understanding and controlling where money is being spent, selecting the most appropriate and right number of resource types, analyzing spend over time, and scaling to meet business needs without overspending. | [Source](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc)
+
+[More information can be found here](https://wa.aws.amazon.com/wat.pillar.costOptimization.en.html).
 
 # Whizlabs Tricky questions
 

@@ -49,6 +49,7 @@
 		- [VPC Peering](#vpc-peering)
 			- [Resources](#resources-2)
 	- [Amazon Route 53](#amazon-route-53)
+		- [Resources](#resources-3)
 		- [Reflecting changes globally](#reflecting-changes-globally)
 - [Management & Governance](#management--governance)
 	- [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -61,7 +62,7 @@
 	- [Amazon CloudWatch](#amazon-cloudwatch)
 	- [AWS Systems Manager](#aws-systems-manager)
 	- [AWS Service Catalog](#aws-service-catalog)
-		- [Resources](#resources-3)
+		- [Resources](#resources-4)
 	- [AWS CloudFormation](#aws-cloudformation)
 	- [AWS Control Tower](#aws-control-tower)
 	- [AWS Organizations](#aws-organizations)
@@ -86,7 +87,7 @@
 		- [Performance Efficiency Pillar](#performance-efficiency-pillar)
 		- [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources-4)
+- [Resources](#resources-5)
 	- [AWS](#aws)
 		- [Courses](#courses)
 		- [Other](#other-1)
@@ -116,7 +117,7 @@ Instance metadata is data about your instance that you can use to configure or m
 
 #### User data
 
-> User data is information that is passed to in instance's operating system, this can be in the form of a bash script written in plaintext. | [Source - Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+> User data is information that is passed to in instance's operating system, this can be in the form of a bash script written in plaintext. | [Source - Whizlabs Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
 
 **Important**
 
@@ -331,7 +332,7 @@ Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolate
 
 ### VPC Peering
 
-> VPC peering can be established between VPCs in different AWS Regions and in separate AWS Accounts. | [Source - Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+> VPC peering can be established between VPCs in different AWS Regions and in separate AWS Accounts. | [Source - Whizlabs Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
 
 A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account. The VPCs can be in different regions (also known as an inter-region VPC peering connection). | [Source](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
 
@@ -344,6 +345,12 @@ A VPC peering connection is a networking connection between two VPCs that enable
 Scalable domain name system (DNS) | [Source](https://aws.amazon.com/route53/?nc2=type_a)
 
 Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.
+
+> In Amazon Route 53, the geolocation routing policy allows for different resources to serve content base on the origin of the request. This in turn makes it possible in the scenario for different versions of the website to be served. | [Source - Whizlabs Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+
+### Resources
+
+- [Geolocation routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
 ### Reflecting changes globally
 

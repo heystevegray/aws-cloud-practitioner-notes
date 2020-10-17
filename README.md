@@ -24,6 +24,13 @@
 		- [Reserved instances](#reserved-instances)
 		- [Dedicated Hosts](#dedicated-hosts)
 - [Security, Identity, & Compliance](#security-identity--compliance)
+	- [AWS Identity & Access Management (IAM)](#aws-identity--access-management-iam)
+		- [Authentication](#authentication)
+			- [User](#user)
+			- [Group](#group)
+			- [Role](#role)
+		- [Authorization](#authorization)
+			- [Policy Document](#policy-document)
 	- [Amazon Cognito](#amazon-cognito)
 		- [Web-identity federation](#web-identity-federation)
 			- [Resources](#resources-1)
@@ -38,6 +45,11 @@
 	- [Amazon CodeGuru](#amazon-codeguru)
 - [Networking & Content Delivery](#networking--content-delivery)
 	- [ELB](#elb)
+	- [Amazon VPC](#amazon-vpc)
+		- [VPC Peering](#vpc-peering)
+			- [Resources](#resources-2)
+	- [Amazon Route 53](#amazon-route-53)
+		- [Reflecting changes globally](#reflecting-changes-globally)
 - [Management & Governance](#management--governance)
 	- [AWS Trusted Advisor](#aws-trusted-advisor)
 	- [AWS Trusted Advisor best practice recommendations](#aws-trusted-advisor-best-practice-recommendations)
@@ -49,7 +61,7 @@
 	- [Amazon CloudWatch](#amazon-cloudwatch)
 	- [AWS Systems Manager](#aws-systems-manager)
 	- [AWS Service Catalog](#aws-service-catalog)
-		- [Resources](#resources-2)
+		- [Resources](#resources-3)
 	- [AWS CloudFormation](#aws-cloudformation)
 	- [AWS Control Tower](#aws-control-tower)
 	- [AWS Organizations](#aws-organizations)
@@ -74,8 +86,10 @@
 		- [Performance Efficiency Pillar](#performance-efficiency-pillar)
 		- [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources-3)
+- [Resources](#resources-4)
 	- [AWS](#aws)
+		- [Courses](#courses)
+		- [Other](#other-1)
 	- [Intellipaat](#intellipaat)
 	- [Pluralsight](#pluralsight)
 	- [Tutorials Dojo](#tutorials-dojo)
@@ -102,7 +116,7 @@ Instance metadata is data about your instance that you can use to configure or m
 
 #### User data
 
-> User data is information that is passed to in instance's operating system, this can be in the form of a bash script written in plaintext. | [Source (Free Practice Test for AWS Certified Cloud Practitioner)](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+> User data is information that is passed to in instance's operating system, this can be in the form of a bash script written in plaintext. | [Source - Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
 
 **Important**
 
@@ -138,29 +152,21 @@ Amazon DynamoDB is a key-value and document database that delivers single-digit 
 
 ## AWS Cost and Usage Reports
 
-[Source](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)
-
-The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available.
+The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. | [Source](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)
 
 ## AWS Billing and Cost Management
 
-[Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html)
-
-AWS Billing and Cost Management is the service that you use to pay your AWS bill, monitor your usage, and analyze and control your costs.
+AWS Billing and Cost Management is the service that you use to pay your AWS bill, monitor your usage, and analyze and control your costs. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html)
 
 ### Forecasting with Cost Explorer
 
-[Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-forecast.html)
-
-You create a forecast by selecting a future time range for your report.
+You create a forecast by selecting a future time range for your report. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-forecast.html)
 
 ### Cost Explorer
 
-[Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+Cost Explorer is a tool that enables you to view and analyze your costs and usage. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
 
 [AWS Cost Explorer now Supports Usage-Based Forecasts](https://aws.amazon.com/about-aws/whats-new/2019/07/usage-based-forecasting-in-aws-cost-explorer/)
-
-Cost Explorer is a tool that enables you to view and analyze your costs and usage.
 
 ## AWS Support Plans
 
@@ -201,6 +207,46 @@ A Dedicated Host is a physical EC2 server dedicated for your use. Dedicated Host
 
 # Security, Identity, & Compliance
 
+## AWS Identity & Access Management (IAM)
+
+### Authentication
+
+#### User
+
+A **permanent** named operator. Could be human, could be machine. | [Source - AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+
+#### Group
+
+A collection of Users. | [Source - AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+
+#### Role
+
+Not permissions. It's an authentication method. An operator (human or machine) with **temporary** credentials. | [Source - AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+
+> You can use roles to delegate access to users, applications, or services that don't normally have access to your AWS resources. | [Source](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+
+> Everything in AWS is an api. | Blain
+
+This means that we have to authenticate and authorize.
+
+### Authorization
+
+#### Policy Document
+
+> Lists the specific api, or wildcard group of api's, that I am allowing against which resources, are there conditions, certain times of day. | Blain
+
+Can be attached to a User, Group, or Role. | [Source - AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+
+**Example: An operator wants to put and Object into an S3 bucket.**
+
+That is an API call. This is the flow of events:
+
+1. The API call is made with credentials attached (username / password).
+2. The call is presented to the IAM engine, is it looks at the credentials and makes sure they are active credentials for a User, Group, or Role.
+3. Policy Documents for a User, Group, or Role are then checked to make sure the call is **authorized**.
+
+The Security Manager can execute a single API statement that removes all the policy documents from all User, Groups, or Roles. A hacker trying to remove an asset, the api action is evaluated by the IAM engine. Since there are no Policy documents associated with the credentials, they are not **authorized** to execute the action. It's also logged on CloudTrail... every api action is recorded, successful or declined.
+
 ## Amazon Cognito
 
 Identity management for your apps | [Source](https://aws.amazon.com/cognito/?nc2=type_a)
@@ -236,6 +282,8 @@ AWS Security Hub gives you a comprehensive view of your security alerts and secu
 Analyze application security | [Source](https://aws.amazon.com/inspector/?nc2=type_a)
 
 > Assesses applications for exposure, vulnerabilities, and deviations from best practices | [Source](https://aws.amazon.com/inspector/?nc2=type_a)
+
+> Automated security assessments service | [Source](https://aws.amazon.com/inspector/?nc2=type_a)
 
 Tell inspector what targets to assess, and how often. Inspector can provide assessments at any stage in the deployment lifecycle.
 
@@ -274,6 +322,32 @@ Amazon CodeGuru is a developer tool powered by machine learning that provides in
 Achieve fault tolerance for any application | [Source](https://aws.amazon.com/elasticloadbalancing/?nc2=type_a)
 
 Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.
+
+## Amazon VPC
+
+Isolated cloud resources | [Source](https://aws.amazon.com/vpc/?nc2=type_a)
+
+Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
+
+### VPC Peering
+
+> VPC peering can be established between VPCs in different AWS Regions and in separate AWS Accounts. | [Source - Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account. The VPCs can be in different regions (also known as an inter-region VPC peering connection). | [Source](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
+
+#### Resources
+
+- [What is VPC peering?](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html)
+
+## Amazon Route 53
+
+Scalable domain name system (DNS) | [Source](https://aws.amazon.com/route53/?nc2=type_a)
+
+Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.
+
+### Reflecting changes globally
+
+Each record has a TTL (time to live) value that specifies how long, in seconds, that you want DNS resolvers to cache the information in the record, such as the IP address for a web server. Until the amount of time that is specified by the TTL passes, DNS resolvers will continue to return the old value in response to DNS queries. | [Source](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/troubleshooting-new-dns-settings-not-in-effect.html#troubleshooting-new-dns-settings-not-in-effect-cached-resource-record-set)
 
 # Management & Governance
 
@@ -467,6 +541,12 @@ Here are some notes from their [free practice exam](https://www.whizlabs.com/lea
 # Resources
 
 ## AWS
+
+### Courses
+
+- [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+
+### Other
 
 - [Schedule and AWS Certified Cloud Practitioner exam](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 - [Overview of Amazon Web Services](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)

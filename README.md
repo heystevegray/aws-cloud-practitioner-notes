@@ -164,7 +164,7 @@ Cost Explorer is a tool that enables you to view and analyze your costs and usag
 
 ## AWS Support Plans
 
-[Source](https://aws.amazon.com/premiumsupport/plans/)
+[Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 
 Plans
 
@@ -176,7 +176,7 @@ Plans
 Basic Support is included for all AWS customers and includes:
 
 - Customer Service and Communities - 24x7 access to customer service, [documentation](https://docs.aws.amazon.com/), [whitepapers](https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc), and [support forums](https://forums.aws.amazon.com/index.jspa).
-- [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
+- [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) - Access to the 7 core Trusted Advisor checks and guidance to provision your resources following best practices to increase performance and improve security.
 - [AWS Personal Health Dashboard](https://aws.amazon.com/premiumsupport/technology/personal-health-dashboard/) - A personalized view of the health of AWS services, and alerts when your resources are impacted.
 
 ## Amazon EC2 Pricing Plans

@@ -468,20 +468,20 @@ Here are some notes from their [free practice exam](https://www.whizlabs.com/lea
 
 ## AWS
 
-- [https://aws.amazon.com/certification/certified-cloud-practitioner/](https://aws.amazon.com/certification/certified-cloud-practitioner/)
-- [https://d0.awsstatic.com/whitepapers/aws-overview.pdf](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)
-- [https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf](https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
-- [https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf](https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf)
-- [https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf](https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf)
-- [https://aws.amazon.com/premiumsupport/plans/](https://aws.amazon.com/premiumsupport/plans/)
+- [Schedule and AWS Certified Cloud Practitioner exam](https://aws.amazon.com/certification/certified-cloud-practitioner/)
+- [Overview of Amazon Web Services](https://d0.awsstatic.com/whitepapers/aws-overview.pdf)
+- [Architecting for the Cloud AWS Best Practices](https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf)
+- [How AWS Pricing Works](https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf)
+- [The Total Cost of (Non) Ownership of Web Applications in the Cloud](https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf)
+- [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 
 ## Intellipaat
 
-- [https://intellipaat.com/mediaFiles/2019/02/AWS-Basic-Cheat-Sheet.png](https://intellipaat.com/mediaFiles/2019/02/AWS-Basic-Cheat-Sheet.png)
+- [AWS Basic Cheat Sheet](https://intellipaat.com/mediaFiles/2019/02/AWS-Basic-Cheat-Sheet.png)
 
 ## Pluralsight
 
-- [https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
+- [Fundamental cloud concepts AWS](https://app.pluralsight.com/library/courses/fundamental-cloud-concepts-aws/table-of-contents)
 
 ## Tutorials Dojo
 

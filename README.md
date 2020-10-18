@@ -12,6 +12,14 @@
 - [Database](#database)
 	- [Amazon Aurora](#amazon-aurora)
 	- [DynamoDB](#dynamodb)
+- [Storage](#storage)
+	- [Amazon S3 Glacier](#amazon-s3-glacier)
+	- [AWS Snow Family](#aws-snow-family)
+		- [AWS Snowmobile](#aws-snowmobile)
+		- [AWS Snowball](#aws-snowball)
+			- [Resources](#resources-1)
+		- [AWS Snowcone](#aws-snowcone)
+			- [Resources](#resources-2)
 - [Billing & Cost Management](#billing--cost-management)
 	- [AWS Cost and Usage Reports](#aws-cost-and-usage-reports)
 	- [AWS Billing and Cost Management](#aws-billing-and-cost-management)
@@ -33,7 +41,7 @@
 			- [Policy Document](#policy-document)
 	- [Amazon Cognito](#amazon-cognito)
 		- [Web-identity federation](#web-identity-federation)
-			- [Resources](#resources-1)
+			- [Resources](#resources-3)
 	- [AWS Artifact](#aws-artifact)
 	- [AWS Directory Service](#aws-directory-service)
 	- [AWS Security Hub](#aws-security-hub)
@@ -47,9 +55,9 @@
 	- [ELB](#elb)
 	- [Amazon VPC](#amazon-vpc)
 		- [VPC Peering](#vpc-peering)
-			- [Resources](#resources-2)
+			- [Resources](#resources-4)
 	- [Amazon Route 53](#amazon-route-53)
-		- [Resources](#resources-3)
+		- [Resources](#resources-5)
 		- [Reflecting changes globally](#reflecting-changes-globally)
 - [Management & Governance](#management--governance)
 	- [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -62,7 +70,7 @@
 	- [Amazon CloudWatch](#amazon-cloudwatch)
 	- [AWS Systems Manager](#aws-systems-manager)
 	- [AWS Service Catalog](#aws-service-catalog)
-		- [Resources](#resources-4)
+		- [Resources](#resources-6)
 	- [AWS CloudFormation](#aws-cloudformation)
 	- [AWS Control Tower](#aws-control-tower)
 	- [AWS Organizations](#aws-organizations)
@@ -87,7 +95,7 @@
 		- [Performance Efficiency Pillar](#performance-efficiency-pillar)
 		- [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources-5)
+- [Resources](#resources-7)
 	- [AWS](#aws)
 		- [Courses](#courses)
 		- [Other](#other-1)
@@ -148,6 +156,52 @@ Amazon Aurora is fully managed by [Amazon Relational Database Service (RDS)](htt
 Fast and flexible NoSQL database service for any scale | [Source](https://aws.amazon.com/dynamodb/?nc2=type_a)
 
 Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale.
+
+# Storage
+
+## Amazon S3 Glacier
+
+Low-cost archive storage in the cloud | [Source](https://aws.amazon.com/glacier/?nc2=type_a)
+
+Amazon S3 Glacier and S3 Glacier Deep Archive are a secure, durable, and extremely low-cost Amazon S3 cloud storage classes for data archiving and long-term backup. They are designed to deliver 99.999999999% durability, and provide comprehensive security and compliance capabilities that can help meet even the most stringent regulatory requirements.
+
+## AWS Snow Family
+
+> Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS | [Source](https://aws.amazon.com/snow/)
+
+[The AWS Snow Family members](https://aws.amazon.com/snow/#AWS_Snow_Family_members):
+
+- AWS Snowmobile
+- AWS Snowball
+- AWS Snowcone
+
+The AWS Snow Family is a service that helps customers who need to run operations in austere, non-data center environments, and in locations where there's no consistent network connectivity. | [Source](https://docs.aws.amazon.com/snowball/?id=docs_gateway)
+
+### AWS Snowmobile
+
+Migrate or transport exabyte-scale data sets into and out of AWS | [Source](https://aws.amazon.com/snowmobile/)
+
+AWS Snowmobile is an Exabyte-scale data transfer service used to move extremely large amounts of data to AWS. You can transfer up to 100PB per Snowmobile, a 45-foot long ruggedized shipping container, pulled by a semi-trailer truck.
+
+### AWS Snowball
+
+Edge computing and petabyte-scale data transport | [Source](https://aws.amazon.com/snowball/?nc2=type_a)
+
+AWS Snowball, a part of the [AWS Snow Family](https://aws.amazon.com/snow/), is an edge computing, data migration, and edge storage device that comes in two options. | [Source](https://aws.amazon.com/snowball/?nc2=type_a&whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
+
+#### Resources
+
+- [AWS Snowball User Guide](https://docs.aws.amazon.com/snowball/latest/ug/whatissnowball.html)
+
+### AWS Snowcone
+
+AWS Snowcone is the smallest member of the [AWS Snow Family](https://aws.amazon.com/snow/) of edge computing, edge storage, and data transfer devices, weighing in at 4.5 pounds (2.1 kg) with 8 terabytes of usable storage. | [Source](https://aws.amazon.com/snowcone/?nc2=type_a)
+
+AWS Snowcone is a portable, rugged, and secure device for edge computing and data transfer. You can use Snowcone to collect, process, and move data to AWS, either offline by shipping the device to AWS, or online by using AWS DataSync. | [Source](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-what-is-snowcone.html)
+
+#### Resources
+
+- [AWS Snowcone User Guide](https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snowcone-what-is-snowcone.html)
 
 # Billing & Cost Management
 

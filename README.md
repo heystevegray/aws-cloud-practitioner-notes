@@ -135,7 +135,7 @@ Instance metadata is data about your instance that you can use to configure or m
 
 Lightsail is an easy-to-use cloud platform that offers you everything needed to build an application or website, plus a cost-effective, monthly plan. | [Source](https://aws.amazon.com/lightsail/?nc2=type_a)
 
-Lightsail is an easy-to-use cloud platform that offers you everything needed to build an application or website, plus a cost-effective, monthly plan.
+Smooth sailing 😊
 
 ### Resources
 

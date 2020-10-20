@@ -26,8 +26,6 @@
     - [Forecasting with Cost Explorer](#forecasting-with-cost-explorer)
     - [Cost Explorer](#cost-explorer)
       - [Resources](#resources-3)
-      - [Resources](#resources-4)
-    - [Resources](#resources-5)
   - [AWS Support Plans](#aws-support-plans)
   - [Amazon EC2 Pricing Plans](#amazon-ec2-pricing-plans)
     - [On-Demand](#on-demand)
@@ -44,7 +42,7 @@
       - [Policy Document](#policy-document)
   - [Amazon Cognito](#amazon-cognito)
     - [Web-identity federation](#web-identity-federation)
-      - [Resources](#resources-6)
+      - [Resources](#resources-4)
   - [AWS Artifact](#aws-artifact)
   - [AWS Directory Service](#aws-directory-service)
   - [AWS Security Hub](#aws-security-hub)
@@ -58,9 +56,9 @@
   - [ELB](#elb)
   - [Amazon VPC](#amazon-vpc)
     - [VPC Peering](#vpc-peering)
-      - [Resources](#resources-7)
+      - [Resources](#resources-5)
   - [Amazon Route 53](#amazon-route-53)
-    - [Resources](#resources-8)
+    - [Resources](#resources-6)
     - [Reflecting changes globally](#reflecting-changes-globally)
 - [Management & Governance](#management--governance)
   - [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -73,14 +71,14 @@
   - [Amazon CloudWatch](#amazon-cloudwatch)
   - [AWS Systems Manager](#aws-systems-manager)
   - [AWS Service Catalog](#aws-service-catalog)
-    - [Resources](#resources-9)
+    - [Resources](#resources-7)
   - [AWS CloudFormation](#aws-cloudformation)
   - [AWS Control Tower](#aws-control-tower)
   - [AWS Organizations](#aws-organizations)
     - [Managing organizational units (OUs)](#managing-organizational-units-ous)
 - [Developer Tools](#developer-tools)
   - [AWS CodeArtifact](#aws-codeartifact)
-    - [Resources](#resources-10)
+    - [Resources](#resources-8)
   - [AWS CodePipeline](#aws-codepipeline)
   - [AWS CodeStar](#aws-codestar)
   - [AWS CodeBuild](#aws-codebuild)
@@ -100,7 +98,7 @@
     - [Performance Efficiency Pillar](#performance-efficiency-pillar)
     - [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources-11)
+- [Resources](#resources-9)
   - [AWS](#aws)
     - [Courses](#courses)
     - [Other](#other-1)
@@ -218,6 +216,8 @@ You can receive reports that break down your costs by the hour, day, or month, b
 
 ## AWS Billing and Cost Management
 
+[A Beginner’s Guide to AWS Cost Management](https://aws.amazon.com/blogs/aws-cost-management/beginners-guide-to-aws-cost-management/)
+
 AWS Billing and Cost Management is the service that you use to pay your AWS bill, monitor your usage, and analyze and control your costs. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html)
 
 ### Forecasting with Cost Explorer
@@ -240,16 +240,8 @@ After you sign up, Cost Explorer can display up to 12 months of historical data 
 
 #### Resources
 
-- [Analyzing your costs with Cost Explorer](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
-
-#### Resources
-
 - [AWS Cost Explorer now Supports Usage-Based Forecasts](https://aws.amazon.com/about-aws/whats-new/2019/07/usage-based-forecasting-in-aws-cost-explorer/)
 - [Analyzing your costs with Cost Explorer](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
-
-### Resources
-
-- [A Beginner’s Guide to AWS Cost Management](https://aws.amazon.com/blogs/aws-cost-management/beginners-guide-to-aws-cost-management/)
 
 ## AWS Support Plans
 

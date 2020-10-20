@@ -25,6 +25,9 @@
   - [AWS Billing and Cost Management](#aws-billing-and-cost-management)
     - [Forecasting with Cost Explorer](#forecasting-with-cost-explorer)
     - [Cost Explorer](#cost-explorer)
+      - [Resources](#resources-3)
+      - [Resources](#resources-4)
+    - [Resources](#resources-5)
   - [AWS Support Plans](#aws-support-plans)
   - [Amazon EC2 Pricing Plans](#amazon-ec2-pricing-plans)
     - [On-Demand](#on-demand)
@@ -41,7 +44,7 @@
       - [Policy Document](#policy-document)
   - [Amazon Cognito](#amazon-cognito)
     - [Web-identity federation](#web-identity-federation)
-      - [Resources](#resources-3)
+      - [Resources](#resources-6)
   - [AWS Artifact](#aws-artifact)
   - [AWS Directory Service](#aws-directory-service)
   - [AWS Security Hub](#aws-security-hub)
@@ -55,9 +58,9 @@
   - [ELB](#elb)
   - [Amazon VPC](#amazon-vpc)
     - [VPC Peering](#vpc-peering)
-      - [Resources](#resources-4)
+      - [Resources](#resources-7)
   - [Amazon Route 53](#amazon-route-53)
-    - [Resources](#resources-5)
+    - [Resources](#resources-8)
     - [Reflecting changes globally](#reflecting-changes-globally)
 - [Management & Governance](#management--governance)
   - [AWS Trusted Advisor](#aws-trusted-advisor)
@@ -70,12 +73,14 @@
   - [Amazon CloudWatch](#amazon-cloudwatch)
   - [AWS Systems Manager](#aws-systems-manager)
   - [AWS Service Catalog](#aws-service-catalog)
-    - [Resources](#resources-6)
+    - [Resources](#resources-9)
   - [AWS CloudFormation](#aws-cloudformation)
   - [AWS Control Tower](#aws-control-tower)
   - [AWS Organizations](#aws-organizations)
     - [Managing organizational units (OUs)](#managing-organizational-units-ous)
 - [Developer Tools](#developer-tools)
+  - [AWS CodeArtifact](#aws-codeartifact)
+    - [Resources](#resources-10)
   - [AWS CodePipeline](#aws-codepipeline)
   - [AWS CodeStar](#aws-codestar)
   - [AWS CodeBuild](#aws-codebuild)
@@ -95,7 +100,7 @@
     - [Performance Efficiency Pillar](#performance-efficiency-pillar)
     - [Cost Optimization Pillar](#cost-optimization-pillar)
 - [Whizlabs Tricky questions](#whizlabs-tricky-questions)
-- [Resources](#resources-7)
+- [Resources](#resources-11)
   - [AWS](#aws)
     - [Courses](#courses)
     - [Other](#other-1)
@@ -209,6 +214,8 @@ AWS Snowcone is a portable, rugged, and secure device for edge computing and dat
 
 The AWS Cost and Usage Reports (AWS CUR) contains the most comprehensive set of cost and usage data available. | [Source](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)
 
+You can receive reports that break down your costs by the hour, day, or month, by product or product resource, or by tags that you define yourself.
+
 ## AWS Billing and Cost Management
 
 AWS Billing and Cost Management is the service that you use to pay your AWS bill, monitor your usage, and analyze and control your costs. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html)
@@ -219,9 +226,30 @@ You create a forecast by selecting a future time range for your report. | [Sourc
 
 ### Cost Explorer
 
-Cost Explorer is a tool that enables you to view and analyze your costs and usage. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+Visualize, understand, and manage your AWS costs and usage over time | [Source](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/)
 
-[AWS Cost Explorer now Supports Usage-Based Forecasts](https://aws.amazon.com/about-aws/whats-new/2019/07/usage-based-forecasting-in-aws-cost-explorer/)
+AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time.
+
+Get started quickly by creating custom reports that analyze cost and usage data. Analyze your data at a high level (for example, total costs and usage across all accounts) or dive deeper into your cost and usage data to identify trends, pinpoint cost drivers, and detect anomalies.
+
+When you first sign up for Cost Explorer, AWS prepares the data about your costs for the current month and the last 12 months, and then calculates the forecast for the next 12 months. The current month's data is available for viewing in about 24 hours. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+
+After you sign up, Cost Explorer can display up to 12 months of historical data (if you have that much), the current month, and the forecasted costs for the next 12 months. | [Source](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+
+> Cost explorer provides forecasts of the likely spend for the next 12 months. | [Source - Whizlabs Free Practice Test for AWS Certified Cloud Practitioner](https://www.whizlabs.com/learn/course/aws-certified-cloud-practitioner-practice-tests/)
+
+#### Resources
+
+- [Analyzing your costs with Cost Explorer](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+
+#### Resources
+
+- [AWS Cost Explorer now Supports Usage-Based Forecasts](https://aws.amazon.com/about-aws/whats-new/2019/07/usage-based-forecasting-in-aws-cost-explorer/)
+- [Analyzing your costs with Cost Explorer](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/ce-what-is.html)
+
+### Resources
+
+- [A Beginner’s Guide to AWS Cost Management](https://aws.amazon.com/blogs/aws-cost-management/beginners-guide-to-aws-cost-management/)
 
 ## AWS Support Plans
 
@@ -456,7 +484,7 @@ AWS Systems Manager gives you visibility and control of your infrastructure on A
 
 ## AWS Service Catalog
 
-Create and use standardized products | [Source](https://aws.amazon.com/servicecatalog/?nc2=type_a&aws-service-catalog.sort-by=item.additionalFields.createdDate&aws-service-catalog.sort-order=desc)
+Create, organize, and govern | [Source](https://aws.amazon.com/servicecatalog/?nc2=type_a&aws-service-catalog.sort-by=item.additionalFields.createdDate&aws-service-catalog.sort-order=desc)
 
 AWS Service Catalog allows organizations to create and manage catalogs of IT services that are approved for use on AWS. These IT services can include everything from virtual machine images, servers, software, and databases to complete multi-tier application architectures.
 
@@ -480,6 +508,8 @@ AWS CloudFormation gives you an easy way to model a collection of related AWS an
 
 Set up and govern a secure, compliant multi-account environment | [Source](https://aws.amazon.com/controltower/)
 
+> "Apply Guardrails" - Prevent resources form being deployed that don't conform to policies | [Source - Video on page](https://aws.amazon.com/controltower/)
+
 If you’re an organization with multiple AWS accounts and teams, cloud setup and governance can be complex and time consuming, slowing down the very innovation you’re trying to speed up. AWS Control Tower provides the easiest way to set up and govern a new, secure, multi-account AWS environment based on best practices established through AWS’ experience working with thousands of enterprises as they move to the cloud.
 
 ## AWS Organizations
@@ -495,6 +525,19 @@ You can use organizational units (OUs) to group accounts together to administer 
 For example, you can attach a policy-based control to an OU, and all accounts within the OU automatically inherit the policy.
 
 # Developer Tools
+
+## AWS CodeArtifact
+
+Secure, scalable, and cost-effective artifact management for software development | [Source](https://aws.amazon.com/codeartifact/)
+
+Development teams often rely on both open-source software packages and those packages built within their organization. IT leaders need to be able to control access to and validate the safety of these software packages. Teams need a way to find up-to-date packages that have been approved for use by their IT leaders. To address these challenges, IT leaders turn to central artifact repository services to store and share packages. However, existing solutions often require teams to purchase licenses for software solutions that are complex to setup, scale, and operate. | [Source](https://aws.amazon.com/codeartifact/)
+
+### Resources
+
+- [Introducing AWS CodeArtifact - AWS Online Tech Talks (Youtube)](https://www.youtube.com/watch?v=pxV5E83S7Bw&ab_channel=AWSOnlineTechTalks)
+- [AWS CodeArtifact Documentation](https://docs.aws.amazon.com/codeartifact/?id=docs_gateway)
+- [AWS CodeArtifact Concepts](https://docs.aws.amazon.com/codeartifact/latest/ug/codeartifact-concepts.html)
+- [What is AWS CodeArtifact?](https://docs.aws.amazon.com/codeartifact/latest/ug/codeartifact-concepts.html)
 
 ## AWS CodePipeline
 
@@ -565,6 +608,14 @@ Review and improve your workloads | [Source](https://aws.amazon.com/architecture
 AWS Well-Architected helps cloud architects build secure, high-performing, resilient, and efficient infrastructure for their applications and workloads.
 
 ## AWS Well-Architected and the Five Pillars
+
+The 5 pillars of the AWS Well-Architected framework are:
+
+1. Operational Excellence - Automate changes, respond to events
+2. Security - Protection of information and systems
+3. Reliability - Performs correctly and consistently
+4. Performance Efficiency - Using computing resources efficiently
+5. Cost Optimization - Avoid unnecessary costs
 
 ### Operational Excellence Pillar
 
